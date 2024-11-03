@@ -38,6 +38,26 @@ public class CatTest {
         Assert.assertEquals(givenName, retrievedName);
         Assert.assertEquals(givenBirthDate, retrievedBirthDate);
         Assert.assertEquals(givenId, retrievedId);
+
+       // cat instanceof CatTest
     }
+
+    @Test
+    public void setName() {
+        // Given (cat data)
+        String givenName = "Zula";
+        Date givenBirthDate = new Date();
+        Integer givenId = 0;
+
+        // When (a cat is constructed)
+        Cat cat = new Cat(givenName, givenBirthDate, givenId);
+
+        cat.setName("Zula Hula");
+        String retrievedName = cat.getName();
+
+        Assert.assertEquals("Zula Hula", retrievedName);
+    }
+
+
 
 }
